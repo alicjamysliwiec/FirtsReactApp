@@ -1,38 +1,119 @@
-.App {
+body {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  background-color: #fed6e3;
+}
+
+div {
+  padding: 2px 30px;
+  border-radius: 5px;
+}
+
+input {
+  margin: 10px 55px;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+img {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+footer {
+  margin-top: 20px;
+  bottom: 0;
+  font-family: monospace;
   text-align: center;
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#c {
+  color: rgb(96, 96, 211);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#f {
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.author {
+  font-weight: bold;
+  color: rgb(113, 189, 189);
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.author:hover {
+  color: rgb(96, 96, 211);
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.source {
+  text-decoration: none;
+  color: grey;
+}
+
+.source:hover {
+  font-weight: bold;
+  color: rgb(114, 114, 209);
+}
+
+.line {
+  font-family: none;
+}
+
+.enter {
+  margin-left: 0;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 50px 0px;
+  box-shadow: 0 2px 3px black;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  max-width: 1000px;
+}
+
+.days {
+  margin-top: 20px;
+  border: 3px solid #a8edea;
+}
+
+.day {
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.weather {
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 3px black;
+  background-color: white;
+}
+
+.city {
+  font-size: 36px;
+  text-align: left;
+}
+
+.wet {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.tmp {
+  text-align: center;
+  font-size: 76px;
+}
+
+.link {
+  color: rgb(113, 189, 189);
+  font-size: 42px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: rgb(96, 96, 211);
 }
