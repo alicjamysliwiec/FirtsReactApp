@@ -1,11 +1,7 @@
-import './App.css';
-import Weather from "./Weather"
+import React from "react";
 
-function App() {
-return (
-    <body>
-      <Weather />
-   
+export default function Footer(){
+    return (
         <footer>
           <span>
             <a
@@ -29,8 +25,5 @@ return (
             </a>
           </span>
         </footer>
-    </body>
-  );
+    )
 }
-
-export default App;
