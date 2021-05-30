@@ -5,7 +5,7 @@ export default function Footer(){
         <footer>
           <span>
             <a
-              href="https://github.com/alicjamysliwiec/WeatherApp"
+              href="https://github.com/alicjamysliwiec/firts-react-app"
               className="source"
               target="_blank"
               rel="noreferrer" 
@@ -13,7 +13,7 @@ export default function Footer(){
               Open-source code
             </a>
           </span>
-          <span> by </span>
+          <span className="text-white"> by </span>
           <span>
             <a
               href="https://www.linkedin.com/in/alicja-my%C5%9Bliwiec-b8b160201/"
