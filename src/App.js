@@ -1,8 +1,9 @@
 import './App.css';
 import Loader from "react-loader-spinner";
 import Footer from "./Footer";
-import axios from "axios"
-import React,{useState} from 'react'
+import axios from "axios";
+import React,{useState} from 'react';
+import Time from"./Time";
 
 function App() {
   const [weatherData ,setWeatherData]=useState({ready:false});
@@ -16,7 +17,7 @@ function App() {
       wind:response.data.wind.speed,
       city:response.data.name,
       description:response.data.weather[0].description,
-      date:"",
+      date:new Date(response.data.dt * 1000),
       ready:true
     });
   }
@@ -35,10 +36,8 @@ function App() {
             <div className="row mt-3">
               <div className="col-3">
                 <div className="row city">{weatherData.city}</div>
-                  <div className="row">
-                    <div className="col day">Saturday</div>
-                    <div className="col time">13.30</div>
-                  </div>
+                    <Time
+                    date={weatherData.date}/>
                     <div className="row wet">{weatherData.description}</div>
               </div>
               <div className="col-5 align-self-center tmp">
