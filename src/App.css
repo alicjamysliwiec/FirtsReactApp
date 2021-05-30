@@ -84,6 +84,13 @@ footer {
   width:40%;
 }
 
+.loader{
+  position: fixed;
+  top:50%;
+  bottom:50%;
+  transform: translate(285%,0%);
+}
+
 .container {
   box-shadow: 0 2px 3px black;
   background-image: linear-gradient(to top, #743880 0%, #fed6e3 100%);
