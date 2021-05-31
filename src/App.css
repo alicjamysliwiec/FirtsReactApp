@@ -6,6 +6,10 @@ body {
   background-position: center;
 }
 
+.weatherInfo{
+padding: 0;
+}
+
 div {
   padding: 2px 30px;
   border-radius: 5px;
@@ -21,6 +25,13 @@ input {
 img {
   max-width: 70px;
   max-height: 70px;
+}
+
+canvas{
+    display: inline-block;
+    margin-right: 30px;
+    height:75px;
+    width: 75px;
 }
 
 footer {
