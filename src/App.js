@@ -6,6 +6,7 @@ import React,{useState} from 'react';
 import WeatherInfo from "./WeatherInfo"
 
 function App() {
+  const apiKey = `9b8a1ecfca5941d5437fb74764c62af8`;
   const [weatherData, setWeatherData] = useState({ready:false});
   const [city, setCity] = useState("London");
   function handleResponse(response){
@@ -30,13 +31,22 @@ function App() {
   }
 
   function search(){
-    const apiKey = `9b8a1ecfca5941d5437fb74764c62af8`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
     axios.get(apiUrl).then(handleResponse);   
   }
 
   function handleCityChange(event){
     setCity(event.target.value);
+  }
+
+  function setCurrentWeather(event){
+    navigator.geolocation.getCurrentPosition(function(position){
+      console.log(position);
+      let lon = position.coords.longitude;
+      let lat = position.coords.latitude;
+      let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&&units=metric`;
+      axios.get(apiURL).then(handleResponse);
+    });
   }
 
   if(weatherData.ready){
@@ -47,7 +57,7 @@ function App() {
               <form onSubmit={handleSubmit}>
                 <input className="enter" type="search" placeholder="Enter a city" onChange={handleCityChange}/>
                 <input className="b" type="submit" value="Search" />
-                <input className="b" type="button" value="Current" />
+                <input className="b" type="button" value="Current" onClick={setCurrentWeather}/>
               </form>
             </div>
             <WeatherInfo info={weatherData}/>
