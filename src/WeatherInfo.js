@@ -4,6 +4,7 @@ import WeatherIcon from "./WeatherIcon"
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props){
+  console.log(props.infoV2.days[0].hours)
     return (          
         <div className="weatherInfo">
         <div className="row mt-3">
@@ -31,12 +32,12 @@ export default function WeatherInfo(props){
                 <div className="weather">
                   <div className="days">
                     <div className="row">
-                      <div className="col hour">12:00</div>
-                      <div className="col hour">15:00</div>
-                      <div className="col hour">18:00</div>
-                      <div className="col hour">21:00</div>
-                      <div className="col hour">00:00</div>
-                      <div className="col hour">03:00</div>
+                      <div className="col hour">{props.infoV2.days[0].hours}</div>
+                      <div className="col hour">{props.infoV2.days[1].hours}</div>
+                      <div className="col hour">{props.infoV2.days[2].hours}</div>
+                      <div className="col hour">{props.infoV2.days[3].hours}</div>
+                      <div className="col hour">{props.infoV2.days[4].hours}</div>
+                      <div className="col hour">{props.infoV2.days[5].hours}</div>
                     </div>
                   </div>
                   <div className="images">
@@ -44,55 +45,55 @@ export default function WeatherInfo(props){
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="snow"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[0].icons}@2x.png`}
+                          alt={props.infoV2.days[0].dsc}
                         />
                       </div>
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="snow"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[1].icons}@2x.png`}
+                          alt={props.infoV2.days[1].dsc}
                         />
                       </div>
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="snow"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[2].icons}@2x.png`}
+                          alt={props.infoV2.days[2].dsc}
                         />
                       </div>
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="snownsun"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[3].icons}@2x.png`}
+                          alt={props.infoV2.days[3].dsc}
                         />
                       </div>
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="rain"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[4].icons}@2x.png`}
+                          alt={props.infoV2.days[4].dsc}
                         />
                       </div>
                       <div className="col">
                         <img
                           className="image"
-                          src="https://openweathermap.org/img/wn/04d@2x.png"
-                          alt="rain"
+                          src={`https://openweathermap.org/img/wn/${props.infoV2.days[5].icons}@2x.png`}
+                          alt={props.infoV2.days[5].dsc}
                         />
                       </div>
                   </div>
                   </div>
                   <div className="temperature">
                     <div className="row">
-                      <div className="col temp">-5°C</div>
-                      <div className="col temp">-10°C</div>
-                      <div className="col temp">0°C</div>
-                      <div className="col temp">-2°C</div>
-                      <div className="col temp">-3°C</div>
-                      <div className="col temp">1°C</div>
+                      <div className="col temp">{props.infoV2.days[0].temperatures}°C</div>
+                      <div className="col temp">{props.infoV2.days[1].temperatures}°C</div>
+                      <div className="col temp">{props.infoV2.days[2].temperatures}°C</div>
+                      <div className="col temp">{props.infoV2.days[3].temperatures}°C</div>
+                      <div className="col temp">{props.infoV2.days[4].temperatures}°C</div>
+                      <div className="col temp">{props.infoV2.days[5].temperatures}°C</div>
                     </div>
                   </div>
                 </div>
