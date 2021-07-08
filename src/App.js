@@ -101,7 +101,7 @@ function App() {
     });
   }
 
-  if(weatherData.ready){
+  if(weatherData.ready && weatherDataV2.ready){
     return (
         <body>
           <div className="container">
