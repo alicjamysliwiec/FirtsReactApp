@@ -3,7 +3,7 @@ import React from "react";
 export default function WeatherTemperature(props){
     return(
     <span>
-        <span className="temperature">{props.info.temperature} </span>
+        <span className="temperature">{props.celcius} </span>
             <a href="/" id="c" className="link">
                       °C
             </a>
