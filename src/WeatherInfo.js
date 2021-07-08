@@ -1,6 +1,7 @@
 import React from "react";
 import Time from "./Time"
 import WeatherIcon from "./WeatherIcon"
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props){
     return (          
@@ -16,14 +17,7 @@ export default function WeatherInfo(props){
                 <span className="icon">
                   <WeatherIcon code={props.info.icon}/>
                 </span>
-                <span className="temperature">{props.info.temperature} </span>
-                  <a href="/" id="c" className="link">
-                    °C
-                  </a>
-                <span className="line"> |</span>
-                  <a href="/" id="f" className="link">
-                    °F
-                  </a>
+                  <WeatherTemperature celcius={props.info.temperature}/>
               </div>
               <div className="col">
                 <div className="row pres mt-3">Pressure: {props.info.pressure} hpa</div>
